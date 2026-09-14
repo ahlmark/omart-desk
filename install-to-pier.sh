@@ -3,8 +3,8 @@ set -eu
 
 usage() {
   echo "Usage: $0 ."
-  echo "Run this from inside your pier, or pass the pier path."
-  echo "Example (you are in ~/urbit/zod): $0 ."
+  echo "Run from inside your pier (~/urbit/zod), or pass that path."
+  echo "Example: $0 ."
   exit 1
 }
 
@@ -17,6 +17,12 @@ if [ ! -d "$PIER/omart" ]; then
 fi
 
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+if [ ! -f "$ROOT/lib/gossip.hoon" ]; then
+  echo "Fetching /lib/gossip.hoon from Fang-/suite..."
+  mkdir -p "$ROOT/lib"
+  curl -fsSL https://raw.githubusercontent.com/Fang-/suite/master/lib/gossip.hoon -o "$ROOT/lib/gossip.hoon"
+fi
 
 cp -R "$ROOT/app" "$ROOT/lib" "$ROOT/sur" "$ROOT/mar" "$ROOT/gen" "$PIER/omart/"
 cp "$ROOT/desk.bill" "$PIER/omart/"
