@@ -1,0 +1,12 @@
+See README.md for the clone path.
+
+From inside ~/urbit/zod:
+
+  git clone https://github.com/ahlmark/omart-desk.git ~/omart-desk
+  chmod +x ~/omart-desk/install-to-pier.sh
+  ~/omart-desk/install-to-pier.sh .
+
+Then in the dojo:
+
+  |commit %omart
+  |install our %omart
