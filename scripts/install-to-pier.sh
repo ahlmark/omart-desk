@@ -39,6 +39,10 @@ cp -R "$DESK/lib" "$DESK/sur" "$DESK/mar" "$DESK/gen" "$PIER/omart/"
 mkdir -p "$PIER/omart/app"
 cp "$DESK/app/omart.hoon" "$PIER/omart/app/"
 cp "$DESK/desk.bill" "$PIER/omart/"
+if [ -d "$DESK/web" ]; then
+  rm -rf "$PIER/omart/web"
+  cp -R "$DESK/web" "$PIER/omart/web"
+fi
 if [ -f "$DESK/sys.kelvin" ]; then
   echo "Not copying sys.kelvin (keep the pier's)."
 fi

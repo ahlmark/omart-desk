@@ -263,30 +263,14 @@
   |=  [ct=@t =octs]
   ^-  simple-payload:http
   [[200 [['content-type' ct] ['cache-control' 'no-store']~]] `octs]
-++  cat-octs
-  |=  [a=octs b=octs]
-  ^-  octs
-  [(add p.a p.b) (add q.a (lsh [3 p.a] q.b))]
-++  clay-mime
+++  clay-file
   |=  [=bowl:gall pax=path]
   ^-  octs
-  =/  =mime
-    .^  mime  %cx
-      :(weld /(scot %p our.bowl)/omart/(scot %da now.bowl) pax)
+  =/  dat=@
+    .^  @  %cx
+      :(weld /(scot %p our.bowl)/[dap.bowl]/(scot %da now.bowl) pax)
     ==
-  q.mime
-++  clay-chunks
-  |=  [=bowl:gall dir=path n=@ud]
-  ^-  octs
-  =/  i=@ud  0
-  =/  out=octs  [0 0]
-  |-  ^-  octs
-  ?:  =(i n)  out
-  =/  =mime
-    .^  mime  %cx
-      :(weld /(scot %p our.bowl)/omart/(scot %da now.bowl) dir /(scot %ud i)/mime)
-    ==
-  $(i +(i), out (cat-octs out q.mime))
+  [(met 3 dat) dat]
 ++  eyre-cards
   |=  =bowl:gall
   ^-  (list card)
@@ -308,14 +292,12 @@
       [307 ['location' '/~/login?redirect=/apps/omart/pals']~]~
     (json-ok (cfg-json cfg))
   ?:  ?=(^ (find "icon.svg" url))
-    (static 'image/svg+xml' (clay-mime bowl /web/icon-svg/mime))
-  ?:  ?=(^ (find "icon.png" url))
-    (static 'image/png' (clay-mime bowl /web/icon-png/mime))
+    (static 'image/svg+xml' (clay-file bowl /web/icon/svg))
   ?:  ?=(^ (find "assets/app.js" url))
-    (static 'text/javascript' (clay-chunks bowl /web/js 32))
+    (static 'text/javascript' (clay-file bowl /web/assets/app/js))
   ?:  ?=(^ (find "assets/app.css" url))
-    (static 'text/css' (clay-chunks bowl /web/css 4))
-  (static 'text/html' (clay-mime bowl /web/index/mime))
+    (static 'text/css' (clay-file bowl /web/assets/app/css))
+  (static 'text/html' (clay-file bowl /web/index/html))
 --
 ::
 =|  state-1

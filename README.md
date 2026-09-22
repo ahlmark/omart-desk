@@ -6,9 +6,9 @@ This repository is one tree:
 
 | Path | What it is |
 |---|---|
-| `desk/` | Gall desk (`%omart`). Copy this onto a pier. |
-| `ui/` | Vite/React client. Build this, then glob it for Landscape. |
-| `scripts/` | Install onto a local pier; prepare a glob. |
+| `desk/` | Gall desk (`%omart`) plus the built UI in `desk/web/`. Copy this onto a pier. |
+| `ui/` | Vite/React source. Rebuild with `sh scripts/sync-ui-into-desk.sh`. |
+| `scripts/` | Copy the desk onto a pier; rebuild the UI into `desk/web/`. |
 
 The agent **depends on `%pals`** (install `~paldev %pals` if you do not have it). This desk does not ship a pals agent.
 
@@ -29,9 +29,10 @@ desk/                 # Clay desk
   mar/ omart-* gossip pals
   gen/omart/
   desk.bill           # ~[%omart]
-  desk.docket-0       # Landscape tile
+  desk.docket-0       # Landscape tile (%site /apps/omart)
   sys.kelvin          # [%zuse 408]
-ui/                   # SPA (base /apps/omart/)
+  web/                # built SPA (index.html, assets/app.js, …)
+ui/                   # SPA source (base /apps/omart/)
 scripts/
 ```
 
@@ -52,4 +53,4 @@ Mutating routes need a logged-in session, header `x-omart: 1`, and a matching `O
 
 Gossip defaults: hops 1, hear/tell `%targets`, pass off.
 
-See `INSTALL.md` for live-ship install and glob publishing.
+Friends install with `|install ~litneb %omart`. See `INSTALL.md`.

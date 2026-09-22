@@ -8,53 +8,55 @@ Requires **%pals**. If needed:
 |install ~paldev %pals
 ```
 
-## Copy the desk onto a pier
+The built UI lives in `desk/web/`. `|install ~litneb %omart` copies the agent and that UI together. Friends do not run `npm`.
 
-From this repo, with `%omart` already created and mounted (`|new-desk %omart`, `|mount %omart`):
+## On the publisher (`~litneb`)
+
+Create and mount the desk if it is new:
 
 ```
-sh scripts/install-to-pier.sh /path/to/pier
+|new-desk %omart
+|mount %omart
 ```
 
-That copies **only** `desk/` into `$PIER/omart` (never `ui/` or `node_modules`). Then:
+From a clone of this repo:
+
+```
+git clone https://github.com/ahlmark/omart-desk.git
+cd omart-desk
+sh scripts/install-to-pier.sh /path/to/litneb-pier
+```
+
+That copies **only** `desk/` into `$PIER/omart` (including `desk/web/`). Then in the dojo:
 
 ```
 |commit %omart
 |install our %omart
-```
-
-On some piers unix `|commit` is unreliable; you can still `|commit` after a clean mount, or use Clay `%info`/`foal` as on the development fake zod.
-
-## Build the UI and glob (Landscape)
-
-```
-cd ui
-npm ci
-npm run build
-```
-
-Then on the **publisher** ship, open `http://<ship>/docket/upload`, desk `%omart`, and glob the whole `ui/dist` directory.
-
-For Ames distribution, change `desk/desk.docket-0` from `%site` to:
-
-```
-  base+'omart'
-  glob-ames+[~your-ship 0v0]
-```
-
-(The hash is rewritten on upload.) Then:
-
-```
 :treaty|publish %omart
 ```
 
-Others install with:
+Do not copy `sys.kelvin` over a live ship's kelvin; the install script leaves the pier's file in place.
+
+## For friends
+
+They need `%pals`, then:
 
 ```
-|install ~your-ship %omart
+|install ~litneb %omart
 ```
 
-Until a glob is uploaded, this desk’s docket still uses `%site /apps/omart` so Gall can serve the SPA itself.
+Landscape opens `/apps/omart`. The tile, left nav, Bazaar, Pals, and Publish screens are the same bundle you ship in `desk/web/`. Their pals list and gossiped listings are from their ship.
+
+## Rebuild the UI (publisher only)
+
+After changing `ui/`:
+
+```
+sh scripts/sync-ui-into-desk.sh
+sh scripts/install-to-pier.sh /path/to/litneb-pier
+```
+
+Then `|commit %omart` again.
 
 ## Gossip defaults
 
