@@ -13,10 +13,6 @@
   <a href="LICENSE">MIT</a>
 </p>
 
-<p align="center">
-  <img src="docs/bazaar.png" alt="Omart bazaar: left nav with Bazaar, Pals, and Publish" width="720" />
-</p>
-
 ## Install
 
 In the dojo, on a ship that already has `%pals`:
