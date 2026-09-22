@@ -271,6 +271,23 @@
       :(weld /(scot %p our.bowl)/[dap.bowl]/(scot %da now.bowl) pax)
     ==
   [(met 3 dat) dat]
+++  cat-octs
+  |=  [a=octs b=octs]
+  ^-  octs
+  [(add p.a p.b) (add q.a (lsh [3 p.a] q.b))]
+++  clay-js-chunks
+  |=  =bowl:gall
+  ^-  octs
+  =/  base=path
+    /(scot %p our.bowl)/[dap.bowl]/(scot %da now.bowl)/web/js
+  =/  =arch  .^(arch %cy base)
+  =/  n=@ud  ~(wyt by dir.arch)
+  =/  i=@ud  0
+  =/  out=octs  [0 0]
+  |-  ^-  octs
+  ?:  =(i n)  out
+  =/  dat=@  .^(@ %cx (weld base /(scot %ud i)/js))
+  $(i +(i), out (cat-octs out [(met 3 dat) dat]))
 ++  eyre-cards
   |=  =bowl:gall
   ^-  (list card)
@@ -294,7 +311,7 @@
   ?:  ?=(^ (find "icon.svg" url))
     (static 'image/svg+xml' (clay-file bowl /web/icon/svg))
   ?:  ?=(^ (find "assets/app.js" url))
-    (static 'text/javascript' (clay-file bowl /web/assets/app/js))
+    (static 'text/javascript' (clay-js-chunks bowl))
   ?:  ?=(^ (find "assets/app.css" url))
     (static 'text/css' (clay-file bowl /web/assets/app/css))
   (static 'text/html' (clay-file bowl /web/index/html))
