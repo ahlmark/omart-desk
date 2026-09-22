@@ -13,7 +13,7 @@ Requires **%pals**. If needed:
 From this repo, with `%omart` already created and mounted (`|new-desk %omart`, `|mount %omart`):
 
 ```
-./scripts/install-to-pier.sh /path/to/pier
+sh scripts/install-to-pier.sh /path/to/pier
 ```
 
 That copies **only** `desk/` into `$PIER/omart` (never `ui/` or `node_modules`). Then:
