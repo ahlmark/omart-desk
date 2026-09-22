@@ -1,6 +1,6 @@
 # Contributing to Omart
 
-Issues and pull requests are welcome. Please read the [code of conduct](CODE_OF_CONDUCT.md) first.
+Issues and pull requests are welcome. Please read the [anti-code of conduct](CODE_OF_CONDUCT.md) first.
 
 ## Report a bug
 

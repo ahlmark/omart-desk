@@ -1,132 +1,59 @@
-# Contributor Covenant Code of Conduct
+# Anti-Code of Conduct
 
-## Our Pledge
+The Omart open source project explicitly rejects traditional codes of conduct that enforce rigid behavioral rules, centralized moderation, or ideological conformity. Instead, we adopt a minimalist framework that trusts contributors to act with reason, accountability, and a focus on technical excellence. Our principles are as follows:
 
-We as members, contributors, and leaders pledge to make participation in our
-community a harassment-free experience for everyone, regardless of age, body
-size, visible or invisible disability, ethnicity, sex characteristics, gender
-identity and expression, level of experience, education, socio-economic status,
-nationality, personal appearance, race, caste, color, religion, or sexual
-identity and orientation.
+## Principles
 
-We pledge to act and interact in ways that contribute to an open, welcoming,
-diverse, inclusive, and healthy community.
+1. **Autonomy Over Conformity**  
+   Contributors are free to express ideas, code, and opinions without fear of censorship or moral policing. Your contributions are judged by their quality, not your adherence to social norms.
 
-## Our Standards
+2. **Meritocracy Drives Progress**  
+   We evaluate contributions based on their technical merit, creativity, and utility. The strength of your code and ideas outweighs compliance with group consensus.
 
-Examples of behavior that contributes to a positive environment for our
-community include:
+3. **No Thought Police**  
+   We do not regulate speech or enforce ideological standards. Open debate, critique, and disagreement are encouraged--robust ideas thrive through scrutiny.
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
-  and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the overall
-  community
+4. **Self-Governance**  
+   No central authority will mediate disputes or dictate behavior. Resolve conflicts directly with others or through transparent community discussion. You are responsible for your actions and their outcomes.
 
-Examples of unacceptable behavior include:
+5. **Focus on the Code**  
+   This project exists to produce high-quality software, not to manage personal or political agendas. Keep discussions and contributions relevant to the project's technical goals.
 
-* The use of sexualized language or imagery, and sexual attention or advances of
-  any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email address,
-  without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+6. **Transparency, Not Bureaucracy**  
+   All project-related decisions, issues, and conflicts are handled openly in public forums. There are no backroom moderations or opaque bans--everything is visible to the community.
 
-## Enforcement Responsibilities
+7. **No Cancel Culture**  
+   We reject cancel culture and its attempts to punish or exclude based on past actions, opinions, or nonconformity. A contributor's actions or behavior outside this project have no bearing on their contributions here, which are evaluated solely on their current merit.
 
-Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take appropriate and fair corrective action in
-response to any behavior that they deem inappropriate, threatening, offensive,
-or harmful.
+8. **Opt-Out Freedom**  
+   If this project's culture or approach does not align with your values, you are free to fork the project, contribute elsewhere, or build something new. We respect your right to choose.
 
-Community leaders have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, and will communicate reasons for
-moderation decisions when appropriate.
+## Purpose
 
-## Scope
-
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official email address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
+This anti-code of conduct exists to foster an environment of intellectual freedom, technical excellence, and minimal governance. It assumes contributors are capable of self-regulation and prioritizes the project's software output over behavioral oversight. By adopting these principles, we aim to create a collaborative space where ideas and code flourish through open, honest, and merit-based contributions.
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-taylor@ahlmark.net. All complaints will be reviewed and investigated promptly
-and fairly.
+There is no formal enforcement mechanism. Contributors are expected to uphold these principles through mutual respect and accountability. Persistent disruptions that harm the project's technical goals may be addressed through transparent community discussion, but no contributor will be excluded based on speech, beliefs, or identity.
 
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
+## Contact
 
-## Enforcement Guidelines
+For project-related questions or to raise concerns, use the public issue tracker or discussion forums. Private moderation channels do not exist--keep all communication open and transparent.
 
-Community leaders will follow these Community Impact Guidelines in determining
-the consequences for any action they deem in violation of this Code of Conduct:
+## Addendum: Adopting This Anti-Code
 
-### 1. Correction
+We encourage other open source projects to adopt or adapt this anti-code of conduct to promote intellectual freedom, meritocracy, and minimal governance in their communities. To apply this anti-code to your project:
 
-**Community Impact**: Use of inappropriate language or other behavior deemed
-unprofessional or unwelcome in the community.
+1. **Copy and Customize**: Copy this document into your project's repository as `CODE_OF_CONDUCT.md`. Replace "[Project Name]" with your project's name and adjust any principles to align with your community's specific goals or values, if needed.
 
-**Consequence**: A private, written warning from community leaders, providing
-clarity around the nature of the violation and an explanation of why the
-behavior was inappropriate. A public apology may be requested.
+2. **Preserve Core Principles**: Maintain the focus on autonomy, merit-based contributions, transparency, and rejection of cancel culture and centralized moderation to stay true to the anti-code's ethos.
 
-### 2. Warning
+3. **Communicate Clearly**: Inform your contributors about the anti-code in your project's documentation or README. Link to the `CODE_OF_CONDUCT.md` file and explain its purpose in fostering a productive, open, and resilient community.
 
-**Community Impact**: A violation through a single incident or series of
-actions.
+4. **Encourage Feedback**: Invite your community to discuss and propose changes to the anti-code through public channels, ensuring it evolves transparently and reflects the project's needs.
 
-**Consequence**: A warning with consequences for continued behavior. No
-interaction with the people involved, including unsolicited interaction with
-those enforcing the Code of Conduct, for a specified period of time. This
-includes avoiding interactions in community spaces as well as external channels
-like social media. Violating these terms may lead to a temporary or permanent
-ban.
+By adopting this anti-code, you signal a commitment to prioritizing code quality and open discourse over restrictive behavioral controls. We believe this approach strengthens open source collaboration and invite you to join us in championing these values.
 
-### 3. Temporary Ban
+---
 
-**Community Impact**: A serious violation of community standards, including
-sustained inappropriate behavior.
-
-**Consequence**: A temporary ban from any sort of interaction or public
-communication with the community for a specified period of time. No public or
-private interaction with the people involved, including unsolicited interaction
-with those enforcing the Code of Conduct, is allowed during this period.
-Violating these terms may lead to a permanent ban.
-
-### 4. Permanent Ban
-
-**Community Impact**: Demonstrating a pattern of violation of community
-standards, including sustained inappropriate behavior, harassment of an
-individual, or aggression toward or disparagement of classes of individuals.
-
-**Consequence**: A permanent ban from any sort of public interaction within
-the community.
-
-## Attribution
-
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.1, available at
-[https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].
-
-Community Impact Guidelines were inspired by
-[Mozilla's code of conduct enforcement ladder][Mozilla CoC].
-
-For answers to common questions about this code of conduct, see the FAQ at
-[https://www.contributor-covenant.org/faq][FAQ]. Translations are available at
-[https://www.contributor-covenant.org/translations][translations].
-
-[homepage]: https://www.contributor-covenant.org
-[v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
-[Mozilla CoC]: https://github.com/mozilla/diversity
-[FAQ]: https://www.contributor-covenant.org/faq
-[translations]: https://www.contributor-covenant.org/translations
+*This anti-code of conduct is adapted from the principles of open source collaboration and is intended to guide, not govern, our community.*

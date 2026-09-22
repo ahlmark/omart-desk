@@ -87,4 +87,4 @@ Gossip defaults: hops 1, hear and tell `%targets`, pass off. The Pals page pokes
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Behavior in issues and reviews is covered by the [code of conduct](CODE_OF_CONDUCT.md). Report a security problem through [GitHub advisories](https://github.com/ahlmark/omart-desk/security/advisories/new), not a public issue. Details are in [SECURITY.md](SECURITY.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md). How this project works with contributors is in the [anti-code of conduct](CODE_OF_CONDUCT.md). Report a security problem through [GitHub advisories](https://github.com/ahlmark/omart-desk/security/advisories/new), not a public issue. Details are in [SECURITY.md](SECURITY.md).
