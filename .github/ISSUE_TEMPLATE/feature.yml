@@ -1,0 +1,19 @@
+name: Feature
+description: A change to the bazaar, pals, publish flow, or the desk.
+title: ""
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What ship owners need
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: How Omart should behave. Mention if it changes gossip, %pals, or the install command.
+    validations:
+      required: true

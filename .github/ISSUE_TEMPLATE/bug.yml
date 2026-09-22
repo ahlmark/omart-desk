@@ -1,0 +1,35 @@
+name: Bug
+description: Something in Omart did not behave as the desk or the UI claims.
+title: ""
+labels:
+  - bug
+body:
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+      description: What should the ship or the Landscape page have done?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: Dojo commands or clicks, in order.
+      placeholder: |
+        |install ~litneb %omart
+        Open /apps/omart
+    validations:
+      required: true
+  - type: input
+    id: kelvin
+    attributes:
+      label: Kelvin
+      description: Output of `+vats %zuse` or the `%zuse` your ship is on, if the desk failed to install.
+      placeholder: "[%zuse 408]"

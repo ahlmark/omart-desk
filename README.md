@@ -1,44 +1,80 @@
-# omart
+<p align="center">
+  <img src="desk/web/icon.svg" alt="Omart" width="96" />
+</p>
 
-Gossip-discovered Omarchy plugin bazaar for Urbit.
+<h1 align="center">Omart</h1>
 
-This repository is one tree:
+<p align="center">
+  Find and share Omarchy plugins from the ships you already talk to.
+</p>
+
+<p align="center">
+  A gossip bazaar for Urbit. Listings travel along <code>%pals</code>, not a central catalog.<br />
+  <a href="LICENSE">MIT</a>
+</p>
+
+<p align="center">
+  <img src="docs/bazaar.png" alt="Omart bazaar: left nav with Bazaar, Pals, and Publish" width="720" />
+</p>
+
+## Install
+
+In the dojo, on a ship that already has `%pals`:
+
+```
+|install ~litneb %omart
+```
+
+If you do not have `%pals` yet:
+
+```
+|install ~paldev %pals
+|install ~litneb %omart
+```
+
+Open the Omart tile in Landscape. You get the same Bazaar, Pals, and Publish screens as the publisher. Your pal list and the listings you hear are your own.
+
+Publishing the desk from your ship is in [INSTALL.md](INSTALL.md).
+
+## What you get
+
+- A Landscape tile at `/apps/omart` with Bazaar, Pals, and Publish.
+- Listings that hop along the ships you have added as pals. The default is one hop, hear and tell limited to those pals, pass off.
+- Publish and retract from the ship you are logged into. A retract is gossiped, so pals drop the listing too.
+- Meet and part write to the `%pals` agent already on the ship. Omart does not ship its own pals agent.
+
+## Why
+
+Omarchy plugins live in git repos scattered across the network. Omart lets a ship publish a listing once and have it arrive at pals, instead of everyone keeping a private bookmark list.
+
+## Backstory
+
+Omart started as a desk for one ship, with a React client beside it. The desk and the UI are now one tree, so a friend can install both with `|install ~litneb %omart`. The publisher copies `desk/` onto their pier, commits, and publishes. Friends do not run `npm`.
+
+## For developers
 
 | Path | What it is |
 |---|---|
-| `desk/` | Gall desk (`%omart`) plus the built UI in `desk/web/`. Copy this onto a pier. |
-| `ui/` | Vite/React source. Rebuild with `sh scripts/sync-ui-into-desk.sh`. |
-| `scripts/` | Copy the desk onto a pier; rebuild the UI into `desk/web/`. |
-
-The agent **depends on `%pals`** (install `~paldev %pals` if you do not have it). This desk does not ship a pals agent.
-
-Clone:
+| `desk/` | Gall desk `%omart`, including the built UI in `desk/web/`. This is what `|install` ships. |
+| `ui/` | Vite and React source. Rebuild with `sh scripts/sync-ui-into-desk.sh`. |
+| `scripts/` | Copy the desk onto a mounted pier, or rebuild `desk/web/`. |
+| `docs/` | Screenshot used above. |
 
 ```
-git clone https://github.com/ahlmark/omart-desk.git
-cd omart-desk
-```
-
-## Layout
-
-```
-desk/                 # Clay desk
+desk/
   app/omart.hoon
-  lib/ gossip pals server
-  sur/ omart pals
-  mar/ omart-* gossip pals
-  gen/omart/
-  desk.bill           # ~[%omart]
-  desk.docket-0       # Landscape tile (%site /apps/omart)
-  sys.kelvin          # [%zuse 408]
-  web/                # built SPA (index.html, assets/app.js, …)
-ui/                   # SPA source (base /apps/omart/)
-scripts/
+  desk.bill            # ~[%omart]
+  desk.docket-0        # Landscape tile, site /apps/omart
+  sys.kelvin           # [%zuse 408]
+  web/                 # index.html, css, and JS chunks
+ui/                    # SPA source, base /apps/omart/
 ```
 
-## API
+Kelvin in this repo is `[%zuse 408]`. If the publisher ship is on a newer `%zuse`, change `desk/sys.kelvin` before committing. The install script does not overwrite the pier's kelvin.
 
-Mutating routes need a logged-in session, header `x-omart: 1`, and a matching `Origin`.
+### API
+
+The client talks to Gall at `/omart`. Mutating routes need a logged-in session, the header `x-omart: 1`, and an `Origin` that matches the ship.
 
 | Method | Path | Auth |
 |---|---|---|
@@ -51,6 +87,8 @@ Mutating routes need a logged-in session, header `x-omart: 1`, and a matching `O
 | POST | `/omart/part` | yes |
 | POST | `/omart/config` | yes |
 
-Gossip defaults: hops 1, hear/tell `%targets`, pass off.
+Gossip defaults: hops 1, hear and tell `%targets`, pass off. The Pals page pokes Gall to change them.
 
-Friends install with `|install ~litneb %omart`. See `INSTALL.md`.
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Behavior in issues and reviews is covered by the [code of conduct](CODE_OF_CONDUCT.md). Report a security problem through [GitHub advisories](https://github.com/ahlmark/omart-desk/security/advisories/new), not a public issue. Details are in [SECURITY.md](SECURITY.md).
