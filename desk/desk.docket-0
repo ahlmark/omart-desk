@@ -1,0 +1,11 @@
+:~
+  title+'Omart'
+  info+'Gossip-discovered Omarchy plugin bazaar'
+  color+0xc5.ccd6
+  version+[0 1 0]
+  website+'https://github.com/ahlmark/omart-desk'
+  license+'MIT'
+  base+'omart'
+  site+/apps/omart
+  image+'/apps/omart/icon.svg'
+==

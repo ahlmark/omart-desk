@@ -1,38 +1,55 @@
-# omart-desk
+# omart
 
-Gall overlay for **%omart**, a gossip-discovered Omarchy plugin bazaar.
+Gossip-discovered Omarchy plugin bazaar for Urbit.
 
-This is the agent you install on a fake `~zod`. It is not the browser preview.
-After install you poke and scry from the dojo.
+This repository is one tree:
 
-Repo: https://github.com/ahlmark/omart-desk
+| Path | What it is |
+|---|---|
+| `desk/` | Gall desk (`%omart`). Copy this onto a pier. |
+| `ui/` | Vite/React client. Build this, then glob it for Landscape. |
+| `scripts/` | Install onto a local pier; prepare a glob. |
 
-## Install onto `~/urbit/zod`
+The agent **depends on `%pals`** (install `~paldev %pals` if you do not have it). This desk does not ship a pals agent.
 
-Your pier already has `omart/` and `base/` mounted. From **inside** `~/urbit/zod`:
-
-```
-git clone https://github.com/ahlmark/omart-desk.git ~/omart-desk
-chmod +x ~/omart-desk/install-to-pier.sh
-~/omart-desk/install-to-pier.sh .
-```
-
-Then in the dojo:
+Clone:
 
 ```
-|commit %omart
-|install our %omart
+git clone https://github.com/ahlmark/omart-desk.git
+cd omart-desk
 ```
 
-You want `gall: installing %omart`.
-
-Do **not** copy `sys.kelvin`. Keep the one `|new-desk` wrote.
-
-## Smoke
+## Layout
 
 ```
-:omart +omart/publish %demo 'Demo plugin' 'https://github.com/you/demo.git' 'a test listing'
-+omart/listings
+desk/                 # Clay desk
+  app/omart.hoon
+  lib/ gossip pals server
+  sur/ omart pals
+  mar/ omart-* gossip pals
+  gen/omart/
+  desk.bill           # ~[%omart]
+  desk.docket-0       # Landscape tile
+  sys.kelvin          # [%zuse 408]
+ui/                   # SPA (base /apps/omart/)
+scripts/
 ```
 
-Full notes are in `INSTALL.txt`.
+## API
+
+Mutating routes need a logged-in session, header `x-omart: 1`, and a matching `Origin`.
+
+| Method | Path | Auth |
+|---|---|---|
+| GET | `/omart/listings.json` | no |
+| GET | `/omart/pals.json` | yes |
+| GET | `/omart/config.json` | yes |
+| POST | `/omart/publish` | yes |
+| POST | `/omart/retract` | yes |
+| POST | `/omart/meet` | yes |
+| POST | `/omart/part` | yes |
+| POST | `/omart/config` | yes |
+
+Gossip defaults: hops 1, hear/tell `%targets`, pass off.
+
+See `INSTALL.md` for live-ship install and glob publishing.
