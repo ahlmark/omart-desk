@@ -18,14 +18,14 @@
 In the dojo, on a ship that already has `%pals`:
 
 ```
-|install ~litneb %omart
+|install ~pilryg-tanmus-hopsec-mitwel--nodreb-sigtul-falhut-samzod %omart
 ```
 
 If you do not have `%pals` yet:
 
 ```
 |install ~paldev %pals
-|install ~litneb %omart
+|install ~pilryg-tanmus-hopsec-mitwel--nodreb-sigtul-falhut-samzod %omart
 ```
 
 Open the Omart tile in Landscape. You get the same Bazaar, Pals, and Publish screens as the publisher. Your pal list and the listings you hear are your own.
@@ -45,7 +45,7 @@ Omarchy plugins live in git repos scattered across the network. Omart lets a shi
 
 ## Backstory
 
-Omart started as a desk for one ship, with a React client beside it. The desk and the UI are now one tree, so a friend can install both with `|install ~litneb %omart`. The publisher copies `desk/` onto their pier, commits, and publishes. Friends do not run `npm`.
+Omart started as a desk for one ship, with a React client beside it. The desk and the UI are now one tree, so a friend can install both with `|install ~pilryg-tanmus-hopsec-mitwel--nodreb-sigtul-falhut-samzod %omart`. The publisher copies `desk/` onto their pier, commits, and publishes. Friends do not run `npm`.
 
 ## For developers
 

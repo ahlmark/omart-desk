@@ -8,9 +8,11 @@ Requires **%pals**. If needed:
 |install ~paldev %pals
 ```
 
-The built UI lives in `desk/web/`. `|install ~litneb %omart` copies the agent and that UI together. Friends do not run `npm`.
+The built UI lives in `desk/web/`. `|install ~pilryg-tanmus-hopsec-mitwel--nodreb-sigtul-falhut-samzod %omart` copies the agent and that UI together. Friends do not run `npm`.
 
-## On the publisher (`~litneb`)
+## On the publisher
+
+The live publisher is the mined comet `~pilryg-tanmus-hopsec-mitwel--nodreb-sigtul-falhut-samzod`, pier `/home/ahlmark/urbit/comet`.
 
 Create and mount the desk if it is new:
 
@@ -24,7 +26,7 @@ From a clone of this repo:
 ```
 git clone https://github.com/ahlmark/omart-desk.git
 cd omart-desk
-sh scripts/install-to-pier.sh /path/to/litneb-pier
+sh scripts/install-to-pier.sh /home/ahlmark/urbit/comet
 ```
 
 That copies **only** `desk/` into `$PIER/omart` (including `desk/web/`). Then in the dojo:
@@ -42,7 +44,7 @@ Do not copy `sys.kelvin` over a live ship's kelvin; the install script leaves th
 They need `%pals`, then:
 
 ```
-|install ~litneb %omart
+|install ~pilryg-tanmus-hopsec-mitwel--nodreb-sigtul-falhut-samzod %omart
 ```
 
 Landscape opens `/apps/omart`. The tile, left nav, Bazaar, Pals, and Publish screens are the same bundle you ship in `desk/web/`. Their pals list and gossiped listings are from their ship.
@@ -53,7 +55,7 @@ After changing `ui/`:
 
 ```
 sh scripts/sync-ui-into-desk.sh
-sh scripts/install-to-pier.sh /path/to/litneb-pier
+sh scripts/install-to-pier.sh /home/ahlmark/urbit/comet
 ```
 
 Then `|commit %omart` again.
